@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>
+      Technical Documentation
+    </title>
+  </head>
+  <nav> 
+    <header class="overall-head">
+      <h1> HTML & CSS Topics </h1>
+    </header>
+    <ul>
+      <li><a href="#introduction"> Introduction </li></a>
+      <li><a href="#html_basics1"> HTML Basics </li></a>
+      <li><a href="#applied_visual_design1"> Applied Visual Design - RGBA </li></a>
+      <li><a href="#css_flexbox1"> CSS Flexbox - Alignment</li></a>
+      <li><a href="#css_grid1"> CSS Grid - Template </li></a>
+      <li><a href="#html_basics2"> HTML Basics </li></a>
+      <li><a href="#applied_visual_design2"> Applied Visual Design - RGBA </li></a>
+      <li><a href="#css_flexbox2"> CSS Flexbox - Alignment</li></a>
+      <li><a href="#css_grid2"> CSS Grid - Template</li></a>
+      <li><a href="#html_basics3"> HTML Basics </li></a>
+      <li><a href="#applied_visual_design3"> Applied Visual Design - RGBA </li></a>
+      <li><a href="#css_flexbox3"> CSS Flexbox - Alignment</li></a>
+      <li><a href="#css_grid3"> CSS Grid - Template</li></a>
+      <li><a href="#reference"> Reference </li></a>
+    </ul>
+  </nav>
+  <main>
+    <section id="introduction">
+      <header>
+        <h2> Introduction </h2>
+      </header>  
+      <article>
+        <p> This is a technical documentation demo webpage to fulfill <a href="https://www.freecodecamp.org/" alt="FreeCodeCamp official website"> FreeCodeCamp (FCC)</a> HTML and CSS project requirements. Please note that all content in this documentation is pasted from FCC official website and therefore is under the copyright of FCC. </p>
+        <p> This document is not aimed at providing systematic technical knowledge on the subject, but merely a front-end practice project. Therefore some information is repeated to fulfill the page. 
+      </article>
+    </section>
+    
+    <section id="html_basics1">
+      <header>
+        <h2> HTML Basics </h2>
+      </header>  
+      <article>
+        <p>HTML, or HyperText Markup Language, is a markup language used to describe the structure of a web page. It uses a special syntax or notation to organize and give information about the page to the browser. Elements usually have opening and closing tags that surround and give meaning to content. For example, there are different tag options to place around text to show whether it is a heading, a paragraph, or a list. </p>
+        <p> For example:</p>
+        <code class="longcode"> 
+          <p> &lt;h1&gt; Top level heading: Maybe a page title &lt;/h1&gt;</p>
+          <p> &lt;p&gt; A paragraph of text. Some information we would like to communicate to the viewer. This can be as long or short as we would like. &lt;/p&gt; </p>
+          <p> &lt;ol&gt; </p>
+          <p> &nbsp&nbsp&nbsp&nbsp&lt;li&gt; Number one on the list &lt;/li&gt;</p>
+          <p> &nbsp&nbsp&nbsp&nbsp&lt;li&gt; Number two &lt;/li&gt;</p>
+          <p> &nbsp&nbsp&nbsp&nbsp&lt;li&gt; A third item &lt;/li&gt;</p>
+          <p> &lt;/ol&gt; </p>
+        </code>
+        <p> Becomes:</p>
+        <p class="example">Top level heading: Maybe a page title</p>
+        <p>A paragraph of text. Some information we would like to communicate to the viewer. This can be as long or short as we would like.</p>
+        <ol>
+         <li>Number one on the list</li>
+         <li>Number two</li>
+         <li>A third item</li>
+        </ol>
+      </article>
+    </section>
+    
+    <section id="applied_visual_design1">
+      <header>
+        <h2> Applied Visual Design - RGBA </h2>
+      </header>  
+      <article>
+        <p> Instead of adjusting your overall background or the color of the text to make the foreground easily readable, you can add a <code> background-color</code> to the element holding the text you want to emphasize. This challenge uses <code>rgba()</code> instead of <code>hex</code> codes or normal <code>rgb()</code>.</p>
+        <code class="longcode">
+          <p>rgba stands for:</p>
+          <p>r = red </p>
+          <p>g = green </p>
+          <p>b = blue </p>
+          <p>a = alpha/level of opacity </p>
+        </code>
+        <p> The RGB values can range from 0 to 255. The alpha value can range from 1, which is fully opaque or a solid color, to 0, which is fully transparent or clear. <code>rgba()</code> is great to use in this case, as it allows you to adjust the opacity. This means you don't have to completely block out the background.</p>
+        <p> You'll use <code>background-color: rgba(45, 45, 45, 0.1)</code> for this challenge. It produces a dark gray color that is nearly transparent given the low opacity value of 0.1. </p>
+      </article>
+    </section>
+    
+    <section id="css_flexbox1">
+      <header>
+        <h2> CSS Flexbox - Alignment </h2>
+      </header>  
+      <article>
+        <p> The <code>align-items</code> property is similar to <code>justify-content</code>. Recall that the <code>justify-content</code> property aligned flex items along the main axis. For rows, the main axis is a horizontal line and for columns it is a vertical line.</p>
+        <p> Flex containers also have a cross axis which is the opposite of the main axis. For rows, the cross axis is vertical and for columns, the cross axis is horizontal.</p>
+        <p>CSS offers the <code>align-items </code>property to align flex items along the cross axis. For a row, it tells CSS how to push the items in the entire row up or down within the container. And for a column, how to push all the items left or right within the container.</p>
+        <p>The different values available for <code>align-items</code> include:</p>
+        <ul>
+          <li><code>flex-start</code>: aligns items to the start of the flex container. For rows, this aligns items to the top of the container. For columns, this aligns items to the left of the container.</li>
+          <li><code>flex-end</code>: aligns items to the end of the flex container. For rows, this aligns items to the bottom of the container. For columns, this aligns items to the right of the container.</li>
+          <li><code>center</code>: align items to the center. For rows, this vertically aligns items (equal space above and below the items). For columns, this horizontally aligns them (equal space to the left and right of the items).</li>
+          <li><code>stretch</code>: stretch the items to fill the flex container. For example, rows items are stretched to fill the flex container top-to-bottom.</li>
+          <li><code>baseline</code>: align items to their baselines. Baseline is a text concept, think of it as the line that the letters sit on.</li>
+      </article>
+    </section>
+    
+    <section id="css_grid1">
+      <header>
+        <h2> CSS Grid - Template</h2>
+      </header>  
+      <article>
+        <p> Simply creating a grid element doesn't get you very far. You need to define the structure of the grid as well. To add some columns to the grid, use the <code>grid-template-columns</code> property on a grid container as demonstrated below:</p>
+        <code class="longcode"> <p>.container {</p>
+          <p> &nbsp&nbsp&nbsp&nbsp&nbsp&nbspdisplay: grid;</p>
+          <p> &nbsp&nbsp&nbsp&nbsp&nbsp&nbspgrid-template-columns: 50px 50px;</p>
+          <p>}</p>
+        </code>
+        <p> This will give your grid two columns that are 50px wide each.</p>
+        <p> The number of parameters given to the <code>grid-template-columns</code> property indicates the number of columns in the grid, and the value of each parameter indicates the width of each column.</p>
+      </article> 
+    </section>
+    
+    <section id="html_basics2">
+      <header>
+        <h2> HTML Basics </h2>
+      </header>  
+      <article>
+        <p>HTML, or HyperText Markup Language, is a markup language used to describe the structure of a web page. It uses a special syntax or notation to organize and give information about the page to the browser. Elements usually have opening and closing tags that surround and give meaning to content. For example, there are different tag options to place around text to show whether it is a heading, a paragraph, or a list. </p>
+        <p> For example:</p>
+        <code class="longcode"> 
+          <p> &lt;h1&gt; Top level heading: Maybe a page title &lt;/h1&gt;</p>
+          <p> &lt;p&gt; A paragraph of text. Some information we would like to communicate to the viewer. This can be as long or short as we would like. &lt;/p&gt; </p>
+          <p> &lt;ol&gt; </p>
+          <p> &nbsp&nbsp&nbsp&nbsp&lt;li&gt; Number one on the list &lt;/li&gt;</p>
+          <p> &nbsp&nbsp&nbsp&nbsp&lt;li&gt; Number two &lt;/li&gt;</p>
+          <p> &nbsp&nbsp&nbsp&nbsp&lt;li&gt; A third item &lt;/li&gt;</p>
+          <p> &lt;/ol&gt; </p>
+        </code>
+        <p> Becomes:</p>
+        <p class="example">Top level heading: Maybe a page title</p>
+        <p>A paragraph of text. Some information we would like to communicate to the viewer. This can be as long or short as we would like.</p>
+        <ol>
+         <li>Number one on the list</li>
+         <li>Number two</li>
+         <li>A third item</li>
+        </ol>
+      </article>
+    </section>
+    
+    <section id="applied_visual_design2">
+      <header>
+        <h2> Applied Visual Design - RGBA </h2>
+      </header>  
+      <article>
+        <p> Instead of adjusting your overall background or the color of the text to make the foreground easily readable, you can add a <code> background-color</code> to the element holding the text you want to emphasize. This challenge uses <code>rgba()</code> instead of <code>hex</code> codes or normal <code>rgb()</code>.</p>
+        <code class="longcode">
+          <p>rgba stands for:</p>
+          <p>r = red </p>
+          <p>g = green </p>
+          <p>b = blue </p>
+          <p>a = alpha/level of opacity </p>
+        </code>
+        <p> The RGB values can range from 0 to 255. The alpha value can range from 1, which is fully opaque or a solid color, to 0, which is fully transparent or clear. <code>rgba()</code> is great to use in this case, as it allows you to adjust the opacity. This means you don't have to completely block out the background.</p>
+        <p> You'll use <code>background-color: rgba(45, 45, 45, 0.1)</code> for this challenge. It produces a dark gray color that is nearly transparent given the low opacity value of 0.1. </p>
+      </article>
+    </section>
+    
+    <section id="css_flexbox2">
+      <header>
+        <h2> CSS Flexbox - Alignment </h2>
+      </header>  
+      <article>
+        <p> The <code>align-items</code> property is similar to <code>justify-content</code>. Recall that the <code>justify-content</code> property aligned flex items along the main axis. For rows, the main axis is a horizontal line and for columns it is a vertical line.</p>
+        <p> Flex containers also have a cross axis which is the opposite of the main axis. For rows, the cross axis is vertical and for columns, the cross axis is horizontal.</p>
+        <p>CSS offers the <code>align-items </code>property to align flex items along the cross axis. For a row, it tells CSS how to push the items in the entire row up or down within the container. And for a column, how to push all the items left or right within the container.</p>
+        <p>The different values available for <code>align-items</code> include:</p>
+        <ul>
+          <li><code>flex-start</code>: aligns items to the start of the flex container. For rows, this aligns items to the top of the container. For columns, this aligns items to the left of the container.</li>
+          <li><code>flex-end</code>: aligns items to the end of the flex container. For rows, this aligns items to the bottom of the container. For columns, this aligns items to the right of the container.</li>
+          <li><code>center</code>: align items to the center. For rows, this vertically aligns items (equal space above and below the items). For columns, this horizontally aligns them (equal space to the left and right of the items).</li>
+          <li><code>stretch</code>: stretch the items to fill the flex container. For example, rows items are stretched to fill the flex container top-to-bottom.</li>
+          <li><code>baseline</code>: align items to their baselines. Baseline is a text concept, think of it as the line that the letters sit on.</li>
+      </article>
+    </section>
+    
+    <section id="css_grid2">
+      <header>
+        <h2> CSS Grid - Template</h2>
+      </header>  
+      <article>
+        <p> Simply creating a grid element doesn't get you very far. You need to define the structure of the grid as well. To add some columns to the grid, use the <code>grid-template-columns</code> property on a grid container as demonstrated below:</p>
+        <code class="longcode"> <p>.container {</p>
+          <p> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspdisplay: grid;</p>
+          <p> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspgrid-template-columns: 50px 50px;</p>
+          <p>}</p>
+        </code>
+        <p> This will give your grid two columns that are 50px wide each.</p>
+        <p> The number of parameters given to the <code>grid-template-columns</code> property indicates the number of columns in the grid, and the value of each parameter indicates the width of each column.</p>
+      </article> 
+    </section>
+          
+    
+    <section id="html_basics3">
+      <header>
+        <h2> HTML Basics </h2>
+      </header>  
+      <article>
+        <p>HTML, or HyperText Markup Language, is a markup language used to describe the structure of a web page. It uses a special syntax or notation to organize and give information about the page to the browser. Elements usually have opening and closing tags that surround and give meaning to content. For example, there are different tag options to place around text to show whether it is a heading, a paragraph, or a list. </p>
+        <p> For example:</p>
+        <code class="longcode"> 
+          <p> &lt;h1&gt; Top level heading: Maybe a page title &lt;/h1&gt;</p>
+          <p> &lt;p&gt; A paragraph of text. Some information we would like to communicate to the viewer. This can be as long or short as we would like. &lt;/p&gt; </p>
+          <p> &lt;ol&gt; </p>
+          <p> &nbsp&nbsp&nbsp&nbsp&lt;li&gt; Number one on the list &lt;/li&gt;</p>
+          <p> &nbsp&nbsp&nbsp&nbsp&lt;li&gt; Number two &lt;/li&gt;</p>
+          <p> &nbsp&nbsp&nbsp&nbsp&lt;li&gt; A third item &lt;/li&gt;</p>
+          <p> &lt;/ol&gt; </p>
+        </code>
+        <p> Becomes:</p>
+        <p class="example">Top level heading: Maybe a page title</p>
+        <p>A paragraph of text. Some information we would like to communicate to the viewer. This can be as long or short as we would like.</p>
+        <ol>
+         <li>Number one on the list</li>
+         <li>Number two</li>
+         <li>A third item</li>
+        </ol>
+      </article>
+    </section>
+    
+    <section id="applied_visual_design3">
+      <header>
+        <h2> Applied Visual Design - RGBA </h2>
+      </header>  
+      <article>
+        <p> Instead of adjusting your overall background or the color of the text to make the foreground easily readable, you can add a <code> background-color</code> to the element holding the text you want to emphasize. This challenge uses <code>rgba()</code> instead of <code>hex</code> codes or normal <code>rgb()</code>.</p>
+        <code class="longcode">
+          <p>rgba stands for:</p>
+          <p>r = red </p>
+          <p>g = green </p>
+          <p>b = blue </p>
+          <p>a = alpha/level of opacity </p>
+        </code>
+        <p> The RGB values can range from 0 to 255. The alpha value can range from 1, which is fully opaque or a solid color, to 0, which is fully transparent or clear. <code>rgba()</code> is great to use in this case, as it allows you to adjust the opacity. This means you don't have to completely block out the background.</p>
+        <p> You'll use <code>background-color: rgba(45, 45, 45, 0.1)</code> for this challenge. It produces a dark gray color that is nearly transparent given the low opacity value of 0.1. </p>
+      </article>
+    </section>
+    
+    <section id="css_flexbox3">
+      <header>
+        <h2> CSS Flexbox - Alignment </h2>
+      </header>  
+      <article>
+        <p> The <code>align-items</code> property is similar to <code>justify-content</code>. Recall that the <code>justify-content</code> property aligned flex items along the main axis. For rows, the main axis is a horizontal line and for columns it is a vertical line.</p>
+        <p> Flex containers also have a cross axis which is the opposite of the main axis. For rows, the cross axis is vertical and for columns, the cross axis is horizontal.</p>
+        <p>CSS offers the <code>align-items </code>property to align flex items along the cross axis. For a row, it tells CSS how to push the items in the entire row up or down within the container. And for a column, how to push all the items left or right within the container.</p>
+        <p>The different values available for <code>align-items</code> include:</p>
+        <ul>
+          <li><code>flex-start</code>: aligns items to the start of the flex container. For rows, this aligns items to the top of the container. For columns, this aligns items to the left of the container.</li>
+          <li><code>flex-end</code>: aligns items to the end of the flex container. For rows, this aligns items to the bottom of the container. For columns, this aligns items to the right of the container.</li>
+          <li><code>center</code>: align items to the center. For rows, this vertically aligns items (equal space above and below the items). For columns, this horizontally aligns them (equal space to the left and right of the items).</li>
+          <li><code>stretch</code>: stretch the items to fill the flex container. For example, rows items are stretched to fill the flex container top-to-bottom.</li>
+          <li><code>baseline</code>: align items to their baselines. Baseline is a text concept, think of it as the line that the letters sit on.</li>
+      </article>
+    </section>
+    
+    <section id="css_grid3">
+      <header>
+        <h2> CSS Grid - Template</h2>
+      </header>  
+      <article>
+        <p> Simply creating a grid element doesn't get you very far. You need to define the structure of the grid as well. To add some columns to the grid, use the <code>grid-template-columns</code> property on a grid container as demonstrated below:</p>
+        <code class="longcode"> <p>.container {</p>
+          <p> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspdisplay: grid;</p>
+          <p> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspgrid-template-columns: 50px 50px;</p>
+          <p>}</p>
+        </code>
+        <p> This will give your grid two columns that are 50px wide each.</p>
+        <p> The number of parameters given to the <code>grid-template-columns</code> property indicates the number of columns in the grid, and the value of each parameter indicates the width of each column.</p>
+      </article> 
+    </section>
+    
+    <section id="reference">
+      <header>
+        <h2> Reference </h2>
+      </header>  
+      <article>
+        <p> All the documentations in this page are taken from <a href="https://www.freecodecamp.org/" alt="freeCodeCamp official website"> freeCodeCamp.org</a>. </p>
+      </article> 
+    </section>
+  </main>
+</html>
